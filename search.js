@@ -13,7 +13,7 @@ let books = [
 
 function findBook(array, value, start, end) {
   var start = start === undefined ? 0 : start;
-  var end = end === undefined ? array.length : end;
+  var end = end === undefined ? array.length-1 : end;
 
   if (start > end) {
     return -1;
