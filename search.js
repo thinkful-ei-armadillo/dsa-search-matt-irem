@@ -32,7 +32,24 @@ function findBook(array, value, start, end) {
   }
 }
 
-console.log(findBook(books, 'World Religions'));
+// console.log(findBook(books, 'World Religions'));
+
+function tradeMax(arr){
+ let max = arr[0] - arr[arr.length-1];
+ let days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+ 
+ for (let i = 0; i < arr.length; i++) {
+    if(arr[i+1]-arr[i]>max){
+      max = arr[i+1]-arr[i];
+      return `${days[i]} with a gain of max ${max}$`;
+    } 
+ }
+ return max;
+}
+
+// [128, 97, 121, 123, 98, 97, 105]
+
+console.log(tradeMax([128, 97, 121, 123, 98, 97, 105]));
 
 
 
